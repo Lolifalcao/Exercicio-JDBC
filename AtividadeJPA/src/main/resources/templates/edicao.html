@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<h1>Editar alunos</h1>
+		<form th:action="@{/cadastro}" method="post" th:object="${aluno}">
+			<label>Id</label>
+			<input type="text" th:field="*{id}" readonly />
+		
+			<label for="idnome">Nome</label>
+			<input id="idnome" type="text" placeholder="Informe nome" th:field="*{nome}" />
+			
+			<label for="idcurso">Curso</label>
+			<input id="idcurso" type="text" placeholder="Informe curso" th:field="*{curso}" />
+			
+			<label for="idperiodo">Periodo</label>
+			<input id="idperiodo" type="text" placeholder="Informe periodo" th:field="*{periodo}" />
+		
+			<button>Salvar</button>
+	</body>
+</html>

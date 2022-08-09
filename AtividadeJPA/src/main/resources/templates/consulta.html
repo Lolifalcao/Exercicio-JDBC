@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<h1>consulta</h1>
+		<table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Curso</th>
+                    <th>Periodo</th>
+					<th>Edição</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="aluno: ${alunos}">
+                    <td th:text="*{aluno.id}"/>
+                    <td th:text="*{aluno.nome}"/>
+                    <td th:text="*{aluno.curso}"/>
+                    <td th:text="*{aluno.periodo}"/>
+					<td><a th:href="@{'/consulta/'+${aluno.id}}">editar</a>
+						<a th:href="@{'/delete/'+${aluno.id}}">excluir</a>
+					</td>
+				</tr>
+            </tbody>
+        </table>
+			<a th:href="@{cadastro}">Cadastro</a>
+	</body>
+</html>
