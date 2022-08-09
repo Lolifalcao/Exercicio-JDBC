@@ -1,3 +1,5 @@
+Este repositório é destinado as atividades das aulas do Professor Vilson Moro
+
 # Criação da tabela para o exercício proposto
 
 ```sql
